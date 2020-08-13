@@ -1,0 +1,64 @@
+.about-us {
+  /* outline: 2px solid turquoise; */
+  margin-bottom: 94px;
+}
+
+.about-us.section .section-title {
+  display: none;
+}
+.about-us.list {
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-item {
+  width: calc(100% - 90px / 4);
+}
+.about-us-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-us-item .headline {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about-us-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-us-item.icon-details::before {
+  background-image: url("../images/about-us/antenna.svg");
+}
+
+.about-us-item.icon-punctuality::before {
+  background-image: url("../images/about-us/clock.svg");
+}
+
+.about-us-item.icon-planning::before {
+  background-image: url("../images/about-us/diagram.svg");
+}
+
+.about-us-item.icon-up-to-date::before {
+  background-image: url("../images/about-us/astronaut.svg");
+}
+
+.about-us .description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--description-text-color);
+}

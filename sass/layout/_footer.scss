@@ -1,0 +1,126 @@
+footer {
+  background-color: #2f303a;
+}
+
+.main-info-container {
+  margin-right: 69px;
+  padding-right: 10px;
+}
+
+.footer .container {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  align-items: baseline;
+}
+.footer-contacts-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.logo.footer {
+  color: var(--primary-bg-color);
+}
+
+.logo.link.footer {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: auto;
+}
+
+.location {
+  color: var(--primary-bg-color);
+}
+
+.footer-contacts {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts-list .item {
+  margin-bottom: 9px;
+}
+
+.join-us-container {
+  margin-right: 94px;
+}
+
+.join-us-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.join-us.list {
+  display: flex;
+}
+
+.join-us.list .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-us-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.join-us-link:hover,
+.join-us-link:focus {
+  background-color: var(--accent-color);
+}
+
+.join-us-link .nw-icon {
+  fill: #ffffff;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-form-field {
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+}
+
+.subscribe-email {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 16px;
+  background-color: transparent;
+  color: #fff;
+}
+.subscribe-email:focus {
+  outline: none;
+}
+
+.subscribe.button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 28px;
+  display: inline-flex;
+  align-items: center;
+}
+.subscribe.button::after {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+
+  background-image: url(../images/icon-send.svg);
+}
