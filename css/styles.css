@@ -582,7 +582,7 @@ h1 {
 } */
 
 /* Portfolio */
-.portfolio.header {
+/* .portfolio.header {
   margin-bottom: 93px;
 }
 
@@ -635,7 +635,7 @@ h1 {
   letter-spacing: 0.03em;
   color: var(--description-text-color);
   padding-left: 24px;
-  /* margin-bottom: 20px; */
+
 }
 
 .project-description {
@@ -643,8 +643,7 @@ h1 {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  /*После позиционирования заменю на цвет из макета
-  color: #ffffff;*/
+  color: #ffffff;
   color: var(--primary-text-color);
   padding-left: 24px;
   padding-right: 24px;
@@ -701,7 +700,6 @@ h1 {
 
 .projects.list .description {
   width: calc((100% - 60px) / 3);
-  /* padding-bottom: 20px; */
 }
 
 .project-section {
@@ -727,7 +725,7 @@ h1 {
 .projects-item.link:hover .project-card .overlay,
 .projects-item.link:focus .project-card .overlay {
   transform: translatey(0);
-}
+} */
 
 /* modal */
 /* 

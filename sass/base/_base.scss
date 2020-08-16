@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  color: var(--primary-text-color);
-  background-color: var(--hero-headline-text-color);
+  color: $primary-text-color;
+  background-color: $hero-headline-text-color;
   font-family: Roboto;
 }
 

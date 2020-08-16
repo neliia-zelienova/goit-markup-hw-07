@@ -18,29 +18,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 528px;
   height: 581px;
   background-color: #ffffff;
 
   padding: 40px;
+
+  .headline {
+    @include fonts(700, 20px, 1.15, 0.03em);
+    margin-bottom: 30px;
+  }
 }
 
-.modal .headline {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  margin-bottom: 30px;
+.close-icon {
+  fill: #000000;
 }
 
 .modal-close {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %display-center;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -49,47 +45,42 @@
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
-}
 
-.modal-close:active {
-  outline: none;
-}
+  &:active {
+    outline: none;
+  }
 
-.close-icon {
-  fill: #000000;
-}
-
-.modal-close:hover .close-icon,
-.modal-close:focus .close-icon {
-  fill: var(--accent-color);
+  &:hover .close-icon,
+  &:focus .close-icon {
+    fill: $accent-color;
+  }
 }
 
 .modal-form {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-.modal-form .form-input {
-  width: 448px;
-  height: 40px;
+  .form-input {
+    width: 448px;
+    height: 40px;
 
-  padding-left: 42px;
-  background: transparent;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
+    padding-left: 42px;
+    background: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include fonts(400, 14px, 1.14, 0.01em);
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+      border-color: $accent-color;
+      outline: none;
+    }
 
-.modal-form .form-input:focus {
-  border-color: var(--accent-color);
-  outline: none;
+    &:not(:placeholder-shown) ~ .form-lable {
+      transform: translate(-43px, -43px);
+    }
+  }
 }
 
 .form-comment {
@@ -102,21 +93,17 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
+  @include fonts(400, 14px, 1.14, 0.01em);
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
 }
 
-.modal-form .form-comment:focus {
-  border-color: var(--accent-color);
-  outline: none;
-}
-
-.modal-form .icon {
+.icon {
   fill: #212121;
   width: 12px;
   height: 12px;
@@ -130,19 +117,16 @@
 .form-field {
   position: relative;
   margin-bottom: 28px;
-}
+  &:focus-within > .icon {
+    fill: $accent-color;
+  }
 
-.form-field:focus-within > .icon {
-  fill: var(--accent-color);
-}
-
-.form-field:focus-within > .form-lable,
-.form-input:not(:placeholder-shown) ~ .form-lable {
-  transform: translate(-43px, -43px);
-}
-
-.form-field:focus-within > .form-lable {
-  color: var(--accent-color);
+  &:focus-within > .form-lable {
+    transform: translate(-43px, -43px);
+  }
+  &:focus-within > .form-lable {
+    color: $accent-color;
+  }
 }
 
 .form-lable {
@@ -159,29 +143,23 @@
   align-items: center;
   margin-bottom: 30px;
   cursor: pointer;
-}
 
-.checkbox-label .checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: absolute;
+  .checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
 }
 
 .agree-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include fonts(400, 14px, 1.71, 0.03em);
 
-  color: var(--description-text-color);
-}
-
-.agree-text > a {
-  text-decoration: underline;
-  color: var(--accent-color);
+  color: $description-text-color;
+  > a {
+    text-decoration: underline;
+    color: $accent-color;
+  }
 }
 
 .checkbox-icon {
@@ -194,9 +172,9 @@
 }
 
 .checkbox-label .checkbox:checked + .checkbox-icon {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
